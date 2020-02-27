@@ -1,0 +1,139 @@
+/* General */
+
+
+h1, h2 {
+    font-family: 'Shojumaru';
+    color: lightgray;
+    text-shadow: 1px 1px 2px red;
+}
+
+h2 {
+    color: black;
+    text-shadow: none;
+}
+
+img { 
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.job {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.description {
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 2px;
+    word-wrap: break-word;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+
+/* Header Specific */
+.header {
+    background-color: #2D080A;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img {
+    width: 25%;
+    max-width: 100%;
+}
+
+
+.name {
+    padding-left: 20px;
+}
+
+/* Main Body Specifics */
+
+body {
+    background-color: #F05C66;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 960px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* Box containing the image and the caption*/
+.aside-a {
+    margin-right: 20px;
+    flex-basis: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside-img {
+    max-width:100%;
+    border: 1px solid #2D080A;
+    border-radius: 4px;
+}
+
+.border {
+    border-radius: 4px;
+}
+
+.caption {
+    background-color: #F7A6AB;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* This aside is the box for the job descriptions*/
+.aside-b {
+    background-color: #F7A6AB;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-basis: 60%;
+    max-width: 60%; /* this wraps any text that might be too long*/
+}
+
+/*Media break for when screen gets smaller and turns to mobile*/
+@media only screen and (max-width: 1000px) {
+    .content {
+        max-width: 960px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aside-a {
+        margin-bottom: 20px;
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .aside-img {
+        max-width: 30%;
+    }
+
+    .aside-b {
+        flex-basis: 100%;
+    }
+    
+  
+}
