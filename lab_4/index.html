@@ -51,7 +51,8 @@
       newPara2.appendChild(document.createElement('br'));
       let line2 = 'The last three letters are ' + myName.slice(myName.length-3, myName.length);
       newPara2.appendChild(document.createTextNode(line2));
-
+      document.querySelector('.content').appendChild(newPara2);
+    
       function nameLength(myName){
         firstName = myName.slice(0, myName.indexOf(' ')-2);
         lastName = myName.slice(myName.indexOf(' ')-1, myName.length);
@@ -61,26 +62,7 @@
         return totalLength
       }
 
-
-      document.querySelector('.content').appendChild(newPara2);
-     
-      
-      
-
-
-
-
-
-
-      /*document.querySelector('.content').innerHTML += '<p>';
-      document.querySelector('.content').innerHTML += para1Text;
-
-      document.querySelector('.content').innerHTML += '<p>';
-      document.querySelector('.content').innerHTML += para2Text;*/
-      
-
-
-      
+      /* Lab 4 ends here*/
         
 
     </script>
