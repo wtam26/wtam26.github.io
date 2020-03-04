@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prof A's Demo Page</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Prof A's Demo Page</div>
+        <button class="button" onclick="clickMe()">
+          Click me to make a change
+        </button>
+        <div class="content">
+          <p>
+            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
+            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
+            cronut glossier pork belly tacos poke next level fanny pack vegan
+            jianbing lo-fi.
+          </p>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </div>
+    <script>
+      function clickMe() {
+        const content = document.querySelector(".content");
+        content.innerHTML = "Hello world";
+      }
+
+      /* Lab 4 starts here */
+
+      const myName = 'Wileen Tam';
+    
+      let myHeader = document.querySelector('.header');
+      myHeader.textContent = 'Wileen Tam\'s Lab 4 ' + nameLength(myName);
+
+      let newPara1 = document.createElement('p');
+      newPara1.setAttribute('class', 'NameLength');
+      let para1Text = 'My name has ' + myName.length + ' characters.';
+      let t1 = document.createTextNode(para1Text);
+      newPara1.appendChild(t1);
+      document.querySelector('.content').appendChild(newPara1);
+
+      let newPara2 = document.createElement('p');
+      newPara2.setAttribute('class', 'ThirdLetter');
+      let para2Text = 'The third letter in my name is ' + myName[2].toUpperCase() + '.';
+      newPara2.appendChild(document.createTextNode(para2Text));
+      newPara2.appendChild(document.createElement('br'));
+      let line2 = 'The last three letters are ' + myName.slice(myName.length-3, myName.length);
+      newPara2.appendChild(document.createTextNode(line2));
+
+      function nameLength(myName){
+        firstName = myName.slice(0, myName.indexOf(' ')-2);
+        lastName = myName.slice(myName.indexOf(' ')-1, myName.length);
+
+        totalLength = firstName.length + lastName.length;
+        
+        return totalLength
+      }
+
+
+      document.querySelector('.content').appendChild(newPara2);
+     
+      
+      
+
+
+
+
+
+
+      /*document.querySelector('.content').innerHTML += '<p>';
+      document.querySelector('.content').innerHTML += para1Text;
+
+      document.querySelector('.content').innerHTML += '<p>';
+      document.querySelector('.content').innerHTML += para2Text;*/
+      
+
+
+      
+        
+
+    </script>
+  </body>
+</html>
