@@ -11,10 +11,12 @@ const overlay = document.querySelector('.overlay');
 /* Willie 1st edition - currently testing to see how to append image into thumbBar */
 
 /*Willie 3rd edition - went back to read ELMS assignment and currently using a loop*/
+for (let i = 1; i < 6; i++) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+    thumbBar.appendChild(newImage);
+}
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', 'images/pic1.jpg');
-thumbBar.appendChild(newImage);
 
 /* Willie 2nd edition - too ineffective, but keeping it here for testing purposes for 'Looping through images' until thumbnail bar can be populated
 const newImage2 = document.createElement('img');
