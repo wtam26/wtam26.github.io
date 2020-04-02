@@ -13,7 +13,7 @@ const newImage2 = document.createElement('img');
 newImage2.setAttribute('src', 'images/pic2.jpg');
 thumbBar.appendChild(newImage2); */
 
-/*Willie 3rd edit - went back to read ELMS assignment and currently using a loop*/
+/*Willie 3rd edit - went back to read ELMS assignment and currently using a loop as suggested*/
 for (let i = 1; i < 6; i++) {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', 'images/pic' + i + '.jpg');
@@ -24,10 +24,9 @@ for (let i = 1; i < 6; i++) {
 
     /*Failed editions - reference for partner to not try these attempts
     
-    newImage.onClick = function() {
+    newImage.onClick = function() { 
         displayedImage.src = newImage.src
     }
-    
    newImage.onClick = function() {
        var tempSrc = newImage.getAttribute("src");
        displayedImage.src = tempSrc;
@@ -37,17 +36,22 @@ for (let i = 1; i < 6; i++) {
 
 
 /* Wiring up the Darken/Lighten button */
-/*Willie 5th edit - decided to work on Darken/Lighten for now*/
+
+/*Willie 5th edit - decided to work on Darken/Lighten for now
+Originally had changed displayedImage but reread Elms Assignment and fixed it to change Overlay instead*/
 btn.onclick = function() {
-    if (btn.getAttribute("class") === "dark") {
+    let btnClass = btn.getAttribute("class");
+    if (btnClass === "dark") {
         btn.setAttribute("light");
         btn.textContent = "Lighten";
-        displayedImage.style.backgroundColor = rgba(0,0,0,0.5);
+        overlay.style.backgroundColor = rgba(0,0,0,0.5);
     } else {
         btn.setAttribute("dark");
         btn.textContent = "Darken";
-        displayedImage.style.backgroundColor = gba(0,0,0,0);
+        overlay.style.backgroundColor = gba(0,0,0,0);
     }
+
+    
 }
 
 
