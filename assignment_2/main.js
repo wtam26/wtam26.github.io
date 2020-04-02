@@ -39,16 +39,22 @@ for (let i = 1; i < 6; i++) {
 
 /*Willie 5th edit - decided to work on Darken/Lighten for now
 Originally had changed displayedImage but reread Elms Assignment and fixed it to change Overlay instead*/
+
+
+/*Willie - here for testing purposes
+var testText = document.querySelector('h1');
+testText.textContent = "Testing";*/
+
 btn.onclick = function() {
-    let btnClass = btn.getAttribute("class");
-    if (btnClass === "dark") {
-        btn.setAttribute("light");
-        btn.textContent = "Lighten";
+    var btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
         overlay.style.backgroundColor = rgba(0,0,0,0.5);
     } else {
-        btn.setAttribute("dark");
-        btn.textContent = "Darken";
-        overlay.style.backgroundColor = gba(0,0,0,0);
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = rgba(0,0,0,0);
     }
 
     
