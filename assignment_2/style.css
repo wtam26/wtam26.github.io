@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
 }
@@ -11,6 +11,7 @@ body {
 .full-img {
   position: relative;
   display: block;
+  margin: auto;
   width: 640px;
   height: 480px;
 }
@@ -37,6 +38,7 @@ button {
 
 .thumb-bar img {
   display: block;
+  margin: auto;
   width: 20%;
   /*Willie - images were not the same height, so added height value to adjust*/
   height: 90px;
