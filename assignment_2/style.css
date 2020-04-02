@@ -37,11 +37,10 @@ button {
 
 .thumb-bar img {
   display: block;
-  width: 16%;
-  height: 75px;
+  width: 20%;
+  height: 90px;
   float: left;
   cursor: pointer;
-  padding: 12px;
 }
 
 .displayed-img {
