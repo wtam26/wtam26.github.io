@@ -20,9 +20,7 @@ for (let i = 1; i < 6; i++) {
     thumbBar.appendChild(newImage);
 
     /*Willie 4th edition - figuring out onClick handler
-    Used Source Code - https://www.w3schools.com/jsref/event_onclick.asp to figure out syntax for onClick Event*/
-
-    /*Failed editions - reference for partner to not try these attempts
+    Failed editions - reference for partner to not try these attempts
     
     newImage.onClick = function() { 
         displayedImage.src = newImage.src
@@ -40,21 +38,16 @@ for (let i = 1; i < 6; i++) {
 /*Willie 5th edit - decided to work on Darken/Lighten for now
 Originally had changed displayedImage but reread Elms Assignment and fixed it to change Overlay instead*/
 
-
-/*Willie - here for testing purposes
-var testText = document.querySelector('h1');
-testText.textContent = "Testing";*/
-
 btn.onclick = function() {
     var btnClass = btn.getAttribute('class');
     if (btnClass === 'dark') {
         btn.setAttribute('class', 'light');
         btn.textContent = 'Lighten';
-        overlay.style.backgroundColor = rgba(0,0,0,0.5);
+        //overlay.style.backgroundColor = rgba(0,0,0,0.5);
     } else {
         btn.setAttribute('class', 'dark');
         btn.textContent = 'Darken';
-        overlay.style.backgroundColor = rgba(0,0,0,0);
+        //overlay.style.backgroundColor = rgba(0,0,0,0);
     }
 
     
