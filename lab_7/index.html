@@ -26,7 +26,14 @@
       </div>
     </div>
     <script>
-      var myMap = L.map('mapid').setView([38.9869, -76.9426], 13);
+
+      const foodInspection = [
+        {"name": "OUTBACK STEAKHOUSE 2145", "longitude": -76.958574, "latitude": 38.966903},
+        {"name": "THE CHILDREN'S GUILD", "longitude": -76.986143, "latitude": 38.959978},
+        {"name": "CADIA HEALTHCARE - HYATTSVILLE", "longitude": -76.977768, "latitude": 38.952607}
+      ]
+
+      var myMap = L.map('mapid').setView([38.9869, -76.9426], 12);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -46,13 +53,11 @@
         radius: 500
       }).addTo(myMap);*/
       
-      marker.bindPopup("<b>University of Maryland</b><br>Mckeldin Library.", {
+      marker.bindPopup("UMD Mckeldin Library", {
         'className': 'customPopup'
       }).openPopup();
       
-
-      /*
-      var popup = L.popup()
+      /*var popup = L.popup()
       .setLatLng([38.9869, -76.9426])
       .setContent("I am a standalone popup.")
       .openOn(myMap);*/
@@ -67,6 +72,10 @@
       }
 
       myMap.on('click', onMapClick);
+
+      for (let i = 0; i < foodInspection.length; i++) {
+        L.marker([foodInspection[i].latitude, foodInspection[i].longitude]).addTo(myMap);
+      }
     
     </script>
   </body>
