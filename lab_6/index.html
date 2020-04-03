@@ -2,12 +2,32 @@
 <html lang="en">
   <head>
     <title>Forms Lab</title>
+    <link rel="stylesheet" href="form_styles.css">
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
         <div>
           <h1>HTML 1 Forms Lab</h1>
+
+          <form action="/my-handling-form-page" method="post">
+           
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="user_name">
+
+               <br>
+            
+               <label for="msg">Message:</label>
+               <textarea id="msg" name="user_message">
+                 By default, this element is filled with text
+               </textarea>
+
+               <br>
+
+               <button type="submit">Send your message</button>
+           
+           </form> 
+
         </div>
       </div>
     </div>
