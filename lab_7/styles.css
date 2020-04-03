@@ -105,4 +105,27 @@ h3 {
 #mapid {
   height: 180px;
   width: 600px;
+  border-radius: 14px;
+}
+
+.customPopup .leaflet-popup-tip,
+.customPopup .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+}
+
+#mapid {
+  height: 180px;
+  width: 80%;
+}
+
 }
