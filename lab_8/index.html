@@ -16,11 +16,33 @@
       </div>
     </div>
     <script>
-      fetch('./countries.json') // replace this with the food safety data set
-        .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
+      fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json') // replace this with the food safety data set
+        .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step. Note lack of curly brackets.
         .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
           console.log(data);
+          const checkData = data.filter((f) => f.geocoded_column_1); //filtering data, if col_1 is undefined, returns false
+          const cleanedData = checkData.map((m) => ({
+            category: m.category,
+            name: m.name,
+            latLong: m.geocoded_column_1.coordinates,
+          }))
           // return data; // <- this will pass the data to the next "then" statement when I'm ready.
+          return cleanedData;
+        })
+        .then((data) => {
+          return data.reduce((result, current) => {
+            if (!result[current.category]) {
+              //if it doesn't have category, set it to empty
+              result[current.category] = []
+            }
+            result[current.category].push(current);
+            //otherwise push current category to result
+            return result;
+          })
+        })
+        .then((data) => {
+          //console.log('cleaned Data', data);
+
         })
     </script>
   </body>
