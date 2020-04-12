@@ -28,7 +28,7 @@
             latLong: m.geocoded_column_1.coordinates,
           }));
           // return data; // <- this will pass the data to the next "then" statement when I'm ready.
-          console.log("check cleaned", cleanedData);
+          //console.log("check cleaned", cleanedData);
           return cleanedData;
         })
         .then((data) => {
@@ -43,9 +43,9 @@
           }, {});
         })
         .then((data) => {
-          console.log("check category cleaned", data);
+          //console.log("check category cleaned", data);
           const formatData = Object.entries(data).map((current, i) => {
-            console.log(current);
+            //console.log(current);
             return {
               y: current[1].length,
               label: current[0],
@@ -55,7 +55,7 @@
         })
 
         .then((results) => {
-          console.log("formated into Object", results);
+          //console.log("formated into Object", results);
           var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
