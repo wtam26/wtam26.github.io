@@ -19,6 +19,22 @@
       .then(res => res.json())
       .then(res => {
         // Here's where your chart code should go.
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+              text: "Types of Food Locations in PG County",
+            },
+            data: [
+              {
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: '##0""',
+                indexLabel: "{label} {y}",
+                dataPoints: results,
+              },
+            ],
+          });
+          chart.render();
       })
   </script>
 </body>
