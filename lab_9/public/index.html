@@ -4,13 +4,16 @@
 <head>
   <title>Replace Me With Your Lab Page</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="wrapper">
       <div class="header">Replace Me With Your Lab Page</div>
-      <div class="content"></div>
+      <div class="content">
+        <div id="chartContainer"></div>
+      </div>
       <div class="footer"></div>
     </div>
   </div>
@@ -30,7 +33,7 @@
                 startAngle: 240,
                 yValueFormatString: '##0""',
                 indexLabel: "{label} {y}",
-                dataPoints: results,
+                dataPoints: res,
               },
             ],
           });
